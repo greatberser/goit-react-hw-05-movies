@@ -1,0 +1,38 @@
+.prevPageBtn{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    background-color: aqua;
+}
+
+.prevPageBtn:hover, .prevPageBtn:focus{
+    background-color: rgb(26, 207, 207);
+}
+
+.wrapperCard{
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.imgMovie{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.genresList{
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.genresList li{
+    padding: 10px;
+    background-color: rgb(159, 255, 255);
+    border: none;
+    border-radius: 10px;
+}

@@ -1,0 +1,11 @@
+.creditsList{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 50px;
+}
+
+.creditsItem{
+    background-color: aquamarine;
+}

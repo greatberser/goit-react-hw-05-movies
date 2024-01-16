@@ -1,0 +1,35 @@
+.containerForm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 50px;
+}
+
+.inputMovie{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.inputMovie::placeholder{
+    font-size: 16px;
+}
+
+.sumbitBtn{
+    background-color: aqua;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.sumbitBtn:hover, .sumbitBtn:focus{
+    background-color: rgb(26, 207, 207);
+}

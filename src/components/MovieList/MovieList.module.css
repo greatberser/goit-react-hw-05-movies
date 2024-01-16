@@ -1,0 +1,39 @@
+a{
+    list-style-type: none;
+}
+
+.movieList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.itemMovie{
+    width: calc(16% - 16px);
+    background-color: aquamarine;
+}
+
+.movieLink{
+    color: #16191c;
+    text-decoration: none;
+    
+}
+
+.imgMovie{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.titleMovie{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 22px;
+    padding: 0 15px;
+}
