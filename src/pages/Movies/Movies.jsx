@@ -34,17 +34,16 @@ export default function Movie() {
     }, [query]);
 
     return (
-    <>
+      <>
         <SearchBar onSubmit={handleSubmit} />
-        {isLoading ? (
-        <Loader />
-        ) : error ? (
-        <div>
+        {isLoading && <Loader />}
+        {error && (
+          <div>
             <b>:{'\u0028'}</b>Something went wrong{''}
-        </div>
-        ) : (
-        <MovieList movies={movie} />
+          </div>
         )}
-    </>
+          <MovieList movies={movie} />
+      </>
     );
+    
 }

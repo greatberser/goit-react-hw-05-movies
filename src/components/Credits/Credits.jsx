@@ -25,6 +25,7 @@ export default function Cast() {
     }, [movieId]);
 
     const baseImgUrl = 'https://image.tmdb.org/t/p/w200';
+    const defaultImg = 'https://placehold.jp/300x450.png';
 
     return isLoading ? (
         <div>LOADING</div>
@@ -38,7 +39,7 @@ export default function Cast() {
             <li className={css.creditsItem} key={id}>
               <img
                 width="300"
-                src={`${baseImgUrl}${profile_path}`}
+                src={profile_path ? `${baseImgUrl}${profile_path}`: defaultImg}
                 alt="original_name"
               />
               <p>{character}</p>

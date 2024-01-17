@@ -23,13 +23,17 @@ export default function Home() {
     getTrendingMovies();
   }, []);
 
-  return isLoading ? (
-      <Loader />
-    ) : error ? (
-    <div>
-      <b>:{'\u0028'}</b>Something went wrong{' '}
-    </div>
-  ) : (
-    <MovieList movies={movies} />
-  );
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (error) {
+    return (
+      <div>
+        <b>:{'\u0028'}</b>Something went wrong{' '}
+      </div>
+    );
+  }
+
+  return <MovieList movies={movies} />;
 }

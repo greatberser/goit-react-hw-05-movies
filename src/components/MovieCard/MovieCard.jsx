@@ -13,7 +13,8 @@ export const MovieCard = ({ movieInfo }) => {
         overview,
     } = movieInfo;
 
-    const baseImgUrl = 'https://image.tmdb.org/t/p/w200';
+    const baseImgUrl = 'https://image.tmdb.org/t/p/w500';
+    const defaultImg = 'https://shop.stryi-tur.info/wp-content/uploads/2022/11/161.jpg';;
     const year = release_date.split('-')[0];
     const location = useLocation();
     const backLink = useRef(location?.state?.from ?? '/');
@@ -24,12 +25,13 @@ export const MovieCard = ({ movieInfo }) => {
             <button className={css.prevPageBtn}>GO BACK</button>
           </Link>
           <div className={css.wrapperCard}>
-            <img
+          <img
               className={css.imgMovie}
-              src={`${baseImgUrl}${poster_path}`}
+              src={poster_path ? `${baseImgUrl}${poster_path}` : defaultImg}
               alt={original_title}
               width="300"
             />
+
             <div>
               <h2>
                 {original_title} ({year})
